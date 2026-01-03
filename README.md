@@ -1,11 +1,11 @@
 # FeaturePortal iOS SDK
 
-[![Swift](https://img.shields.io/badge/Swift-6.0-orange.svg)](https://swift.org)
-[![Platforms](https://img.shields.io/badge/Platforms-iOS%2017+%20|%20macOS%2014+%20|%20visionOS%201+-blue.svg)](https://developer.apple.com)
+[![Swift](https://img.shields.io/badge/Swift-5.9+-orange.svg)](https://swift.org)
+[![Platform](https://img.shields.io/badge/Platform-iOS%2017+-blue.svg)](https://developer.apple.com)
 [![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-The official iOS SDK for [FeaturePortal](https://featureportal.com) - a powerful feature request and roadmap management platform. Integrate beautiful, native feature request and roadmap views directly into your iOS, macOS, or visionOS app.
+The official iOS SDK for [FeaturePortal](https://featureportal.com) - a powerful feature request and roadmap management platform. Integrate beautiful, native feature request and roadmap views directly into your iOS app.
 
 ## Features
 
@@ -14,13 +14,12 @@ The official iOS SDK for [FeaturePortal](https://featureportal.com) - a powerful
 - **Public Roadmap**: Keep your users informed with an integrated roadmap view
 - **Real-time Updates**: Automatically sync feature requests and roadmap items
 - **Easy Integration**: Simple configuration with just a few lines of code
-- **Cross-platform**: Supports iOS, macOS, and visionOS
 
 ## Requirements
 
-- iOS 17.0+ / macOS 14.0+ / visionOS 1.0+
-- Swift 6.0+
-- Xcode 16.0+
+- iOS 17.0+
+- Swift 5.9+
+- Xcode 15.0+
 
 ## Installation
 
@@ -180,10 +179,10 @@ For more information about FeaturePortal and its features, visit:
 | Platform | Status | Minimum Version |
 |----------|--------|----------------|
 | iOS | ✅ Fully Supported | iOS 17.0+ |
-| macOS | 🚧 Coming Soon | macOS 14.0+ |
-| visionOS | 🚧 Coming Soon | visionOS 1.0+ |
+| macOS | 🚧 Planned | TBD |
+| visionOS | 🚧 Planned | TBD |
 
-*Note: macOS and visionOS support is planned for a future release.*
+*Note: Currently iOS-only. macOS and visionOS support may be added in future releases.*
 
 ## Support
 

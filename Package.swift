@@ -1,14 +1,12 @@
-// swift-tools-version: 6.0
+// swift-tools-version: 5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
 
 let package = Package(
-  name: "featureportal-ios-dev",
+  name: "FeaturePortal",
   platforms: [
-    .macOS(.v14),
-    .iOS(.v17),
-    .visionOS(.v1)
+    .iOS(.v17)
   ],
   products: [
     .library(
