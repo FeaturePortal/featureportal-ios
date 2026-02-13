@@ -27,9 +27,14 @@ This is **FeaturePortal iOS SDK** - a SwiftUI-based feature request portal that 
 - `FeatureListView` - Main SwiftUI view containing TabView with Requests and Roadmap tabs
 - `FeaturePortalModel` - `@Observable` view model marked `@MainActor` for UI state
 - `APIClient` - `actor` for thread-safe async networking
+- `FeaturePromptTrigger` - `@MainActor` class tracking engagement metrics for the prompt system
+- `FeaturePromptModifier` - SwiftUI `ViewModifier` that orchestrates the mascot animation and prompt overlay
 
 **Data Flow:**
 1. Configure SDK with API key → 2. Present `FeatureListView` → 3. Model fetches via `APIClient` → 4. Views bind to observable properties
+
+**Engagement Prompt Flow:**
+1. `FeaturePortal.configure()` creates `FeaturePromptTrigger` → 2. `.featurePrompt()` modifier checks eligibility on appear/foreground → 3. Mascot animates in → 4. User taps CTA → 5. `FeatureListView` opens as sheet
 
 **Networking Pattern:**
 - All network calls are async/await
@@ -50,9 +55,16 @@ This is **FeaturePortal iOS SDK** - a SwiftUI-based feature request portal that 
 - Keep `APIClient` as an `actor`
 - All networking must be async/await
 
+**Engagement Prompt:**
+- Engagement state stored in `UserDefaults(suiteName: "com.featureportal.engagement")`
+- `FeaturePromptConfiguration` holds all thresholds (customizable)
+- Mascot built with pure SwiftUI shapes (`LightbulbShape`, `SmileShape`)
+- Animations use iOS 17+ APIs: `KeyframeAnimator`, `PhaseAnimator`, `.spring(duration:bounce:)`
+
 **Testing:**
 - Pass `useMockData: true` to `FeaturePortalModel` for testing
 - `MockAPIClient` provides 5 sample feature requests
+- Use `FeaturePromptTrigger.resetAllData()` to clear engagement state during development
 
 ## Platform Requirements
 

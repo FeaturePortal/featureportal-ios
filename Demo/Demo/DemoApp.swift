@@ -13,6 +13,7 @@ struct DemoApp: App {
 
   init () {
     FeaturePortal.configure(apiKey: "cmjj2poso0003r8z4cdkrkybt")
+    FeaturePortal.logAppLaunch()
   }
 
     var body: some Scene {
